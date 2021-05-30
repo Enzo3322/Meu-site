@@ -459,7 +459,7 @@ img {
 /* ===== FOOTER=====*/
 
 .footer {
-  background-color: var(--dark-color);
+  background-color: var(--first-color);
 }
 
 .footer__container {
@@ -471,22 +471,27 @@ img {
   color: var(--white-color);
   margin-bottom: var(--mb-2);
 }
+.footer__text {
+  color: var(--white-color);
+}
 
 .footer__link {
   padding: 0.25rem 0;
+  color: var(--white-color);
 }
 
 .footer__link:hover {
-  color: var(--first-color);
+  color: var(--dark-color);
 }
 
 .footer__social {
   font-size: 1.4rem;
   margin-right: var(--mb-1);
+  color: var(--white-color);
 }
 
 .footer__social:hover {
-  color: var(--first-color);
+  color: var(--dark-color);
 }
 
 /* ===== MEDIA QUERIES =====*/
