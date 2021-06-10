@@ -12,7 +12,8 @@
 /*===== Colores =====*/
 
 :root {
-  --first-color: #000541;
+  --color-gradient: -webkit-linear-gradient(left,#fa7219,#c82726,#b2042c,#922145,#7d3a57,#526b7b,#24c4cf);
+  --first-color: #141414;
   --white-color: #fafaff;
   --dark-color: #2a3b47;
   --text-color: #697477;
@@ -139,7 +140,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
+  background: -webkit-linear-gradient(left,#fa7219,#c82726,#b2042c,#922145,#7d3a57,#526b7b,#24c4cf);
   padding-bottom: 10px;
 }
 
@@ -227,17 +229,24 @@ img {
   align-self: flex-end;
   font-size: var(--big-font-size);
   color: var(--white-color);
-  line-height: 0.8;
+  
+  line-height: .9;
+  ;
 }
 .home__subtitle {
   color: var(--white-color);
-  margin-top: 80px;
   font-size: 30px;
   margin-left: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .home__title span {
   text-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .home__scroll {
@@ -363,7 +372,7 @@ img {
   font-size: 26px;
 }
 .service-box:hover .service-icon {
-  background: var(--first-color);
+  background: var(--color-gradient);
   color: #f1f1f1;
 }
 .service-title {
@@ -534,7 +543,7 @@ img {
   }
   .home__container {
     height: 100vh;
-    grid-template-rows: 1.7fr 1fr;
+    grid-template-rows: 2.5fr 1fr;
     row-gap: 0;
   }
   .home__img {
