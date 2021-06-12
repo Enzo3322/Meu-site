@@ -88,3 +88,19 @@ function myFunction() {
     document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+$(function () {
+    (function anima() {
+        $(".bx-up-arrow-alt").animate({
+            "top": "8", // 1ª animação: vai de 0 a 8 no top
+            "opacity": "1"
+        }, 200, function () {
+            $(this).animate({
+                "top": "12", // 2ª animação: vai de 8 a 12 no top
+                "opacity": ".1"
+            }, 500, function () {
+                $(this).css("top", "0"); // volto a seta para posição 0
+                anima(); // chamo a função criando um loop
+            });
+        });
+    }())
+});
